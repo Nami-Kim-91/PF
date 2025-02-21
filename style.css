@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal;
 } 
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *{margin: 0,; padding:0; }
 
@@ -14,18 +20,19 @@ body{
 /*** Header ***/
 
 nav {
+  font-family: 'CookieRun-Regular';
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #888;
+  background-color: #999;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  z-index: 1000;
+  padding: 0 auto ;
+  z-index: 100;
 }
 
 .menu {
@@ -45,7 +52,7 @@ nav {
 }
 
 .menu > li > a:hover {
-  background-color: #111;
+  background-color: #666;
 }
 
 /* 모바일 네비게이션 */
@@ -311,7 +318,7 @@ footer >.info {
 
 
 /* 📌 786px 이하에서 스타일 변경 */
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 768px) {
 
    /* 📌 메뉴 네비게이션 반응형 */
   nav {
@@ -322,16 +329,22 @@ footer >.info {
   .menu {
     flex-direction: column;
     padding: 0;
+    margin: 0;
   }
   .menu > li {
+    font-size: 19px;
     margin: 0;
     padding: 0;
   }
-  /* 📌 컨테이너 반응형 조정 */
+  .menu > li > a:hover {
+    /* padding: 0 220px; */
+  }
+  /* 📌 자기소개 반응형 조정 */
   .container {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
+    margin-top: 100px;
     padding: 10px;
   }
   
@@ -342,23 +355,52 @@ footer >.info {
   }
   .image-section {
     width: 90%;
-    margin: 0 auto;
+    margin: 0px auto;
   }
   .image-section img {
     width: 100%;
     max-width: 300px;
+    margin-left: 60px;
   }
 
   /* 📌 표지 (Cover) 스타일 조정 */
   .cover {
-    height: 50vh;
+    height: 80vh;
   }
   .cover > h1 {
-    font-size: 32px;
+    font-size: 55px;
   }
 
+  @media screen and (max-width: 768px) {
+    .tesla, .netflix, .airbnb, .blog, .ecomm {
+      flex-direction: column;  /* ✅ 세로 정렬 변경 */
+      align-items: center;
+    }
   
-
+    /* ✅ 이미지가 위, 텍스트가 아래 */
+    .tesla img, .netflix img, .airbnb img, .blog img, .ecomm img {
+      width: 80%;  /* ✅ 화면이 작아지면 크기 조절 */
+      max-width: 500px;
+      margin-bottom: 20px;  /* ✅ 이미지 아래 간격 추가 */
+    }
+  
+    .tesla .exp1, .netflix .exp2, .airbnb .exp3, .blog .exp4, .ecomm .exp5 {
+      width: 90%;
+      text-align: center;
+    }
+  }
+  .netflix > .exp2{
+    order:2;
+  }
+  .netflix >img{
+    order:2;
+  }
+  .blog > .exp4{
+    order:2;
+  }
+  .blog > img {
+    order:2;
+  }
   /* 📌 푸터 반응형 */
   footer > .info {
     text-align: center;
