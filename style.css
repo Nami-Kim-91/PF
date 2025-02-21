@@ -1,0 +1,358 @@
+*{margin: 0,; padding:0; }
+
+body{
+  height: 100vh;
+}
+
+
+/*** Header ***/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu > li {
+  margin: 0 10px;
+}
+
+.menu > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 10px;
+}
+
+.menu > li > a:hover {
+  background-color: #111;
+}
+
+/* 모바일 네비게이션 */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/*** 커버페이지 ***/
+.cover{
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.cover > h1 {
+  font-size: 48px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/*** intro ***/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  margin-left: 470px;
+}
+.text-section {
+  flex: 1;
+  width: 30%;
+  padding: 30px;
+}
+.text-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.text-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+.image-section {
+  flex: 2;
+  margin-right: 80px;
+}
+.image-section img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+/*** Web Publishing ***/
+.wrapper{
+  width: 100%;
+}
+.wrapper>.title{
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#website{  
+  padding-top: 50px;
+}
+/* tesla */
+.tesla{
+  display:flex;  
+  justify-content: center;
+  padding: 10px;
+}
+.tesla > img {
+  width: 35%;
+  margin-right: 80px;
+}
+.tesla > .exp1{
+  width: 30%;
+} 
+/* .tesla > .box1{
+  background-color: pink;
+} */
+
+/* netflix */
+.netflix{
+  display: flex;
+  justify-content: center;
+}
+.netflix > .exp2{
+  width: 30%;
+  order:1;
+  text-align: left;
+  margin-right: 80px;
+  margin-left: 200px;
+}
+.netflix >img{
+  width: 38%;
+  order: 2;
+}
+
+/* airbnb */
+.airbnb{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+.airbnb > img{
+  width: 35%;
+  margin-right: 80px;
+}
+.airbnb > .exp3{
+  width: 30%;
+}
+
+/* blog */
+.blog{
+  display: flex;
+  justify-content: center;
+}
+.blog > .exp4{
+  width: 30%;
+  order:1;
+  text-align: left;
+  margin-right: 80px;
+}
+.blog > img{
+  width: 30%;
+  order: 2;
+}
+
+/* ecomm */
+.ecomm{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+.ecomm >img{
+  width: 35%;
+  margin-right: 80px;
+}
+.ecomm > .exp5{
+  width: 30%;
+}
+
+
+/*** Practical ***/
+.slider-container{
+  /* width: 1600px; */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin:0 130px ;
+}
+.slider-container >h2{
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slides{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide{
+  min-width: 500px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+.slide img {
+  width: 500px;
+  height: 500px;
+}
+.caption{
+margin-top: 10px;
+font-size: 24px;
+color: #333;
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 60px;
+  padding: 30px;
+  cursor: pointer;
+}
+.prev { left: -20px; }
+.next { right: -20px; }
+
+
+/*** footer ***/
+footer{
+  background-color: #333;
+  color: antiquewhite; 
+  padding-bottom: 30px;
+}
+footer > p {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer >.info {
+  margin-left: 70px;
+  font-size: 20px;
+}
+.mail {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.phone {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.git {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info > div > i{
+  width: 30px;
+}
+.info > div >span{
+  display: inline-block;
+  width: 300px;
+}
+
+
+
+/* 📌 786px 이하에서 스타일 변경 */
+@media screen and (max-width: 786px) {
+
+   /* 📌 메뉴 네비게이션 반응형 */
+  nav {
+    flex-direction: column;
+    height: auto ;
+    text-align: center;
+  }
+  .menu {
+    flex-direction: column;
+    padding: 0;
+  }
+  .menu > li {
+    margin: 0;
+    padding: 0;
+  }
+  /* 📌 컨테이너 반응형 조정 */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  /* 📌 텍스트 & 이미지 크기 조정 */
+  .text-section {
+    width: 90%;
+    text-align: center;
+  }
+  .image-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .image-section img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* 📌 표지 (Cover) 스타일 조정 */
+  .cover {
+    height: 50vh;
+  }
+  .cover > h1 {
+    font-size: 32px;
+  }
+
+  
+
+  /* 📌 푸터 반응형 */
+  footer > .info {
+    text-align: center;
+    margin-left: 0;
+  }
+}
